@@ -1,10 +1,11 @@
-<div>
+<div class = "body">
     <h1>This is my Quotes App</h1>
     <div class = "row">
         <div class= "col-md-6">
             <app-input-form></app-input-form>
         </div>
         <div class="col-md-6">
+            <h2>Find Your Best Quote</h2>
             <ul>
                 <div *ngFor = 'let quote of quotes; let i= index'>
                     <li> {{quote.narration}}</li>  
