@@ -1,14 +1,24 @@
 <div>
     <h1>This is my Quotes App</h1>
-    <ul>
-        <div *ngFor = 'let quote of quotes; let i= index'>
-            <li> {{quote.narration}}</li>  
-            <button (click) = "showDetails(i)">Show Details</button>
-            <img [src] = "url">
-            <img [src] = "lru"> 
-            <app-quotes-details *ngIf=quote.showAuthor [quote]= 'quote' (isComplete) = 'deleteQuote($event, (i))'></app-quotes-details>
+    <div class = "row">
+        <div class= "col-md-6">
+            <app-input-form></app-input-form>
         </div>
-        
-    </ul>
-    <p *ngIf ='quotes.length > 5'>You have entered more than 5 goals</p>
+        <div class="col-md-6">
+            <ul>
+                <div *ngFor = 'let quote of quotes; let i= index'>
+                    <li> {{quote.narration}}</li>  
+                    <button (click) = "showDetails(i)">Show Details</button>
+                    <img [src] = "url">
+                    <img [src] = "lru"> 
+                    <app-quotes-details *ngIf=quote.showAuthor [quote]= 'quote' (isComplete) = 'deleteQuote($event, (i))'></app-quotes-details>
+                </div>
+                
+            </ul>
+            <p *ngIf ='quotes.length > 5'>You have entered more than 5 goals</p>
+
+        </div>
+
+    </div>
+   
 </div>
