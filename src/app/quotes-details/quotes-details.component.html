@@ -1,8 +1,9 @@
 <div>
     <p>Authored By:{{quote.author}}</p>
     <p>Entered By: {{quote.enteredBy}}</p>
-    <p>Date Entered: {{quote.dateEntered}}</p>
+    <!-- <p>Date Entered: {{quote.dateEntered}}</p> -->
 </div>
+<p>This quote was created {{quote.dateEntered | dateCount }} days ago</p>
 <button (click) = 'deleteQuote(true)'>Delete Quote</button>
 
 
