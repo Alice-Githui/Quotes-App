@@ -1,10 +1,14 @@
 <div>
     <h1>This is my quotes App</h1>
     <ul>
-        <li *ngFor = 'let quote of quotes'>
-            {{quote.narration}}
-            <app-quotes-details [quote] = 'quote'></app-quotes-details>
-        </li>
+        <div *ngFor = 'let quote of quotes; let i= index'>
+            <li> {{quote.narration}}</li>  
+            <button (click) = "showDetails(i)">Show Details</button>
+            <app-quotes-details *ngIf=quote.showAuthor [quote]= 'quote'></app-quotes-details>
+            <app-quotes-details *ngIf=quote.showEnteredBy [quote]= 'quote'></app-quotes-details>
+            <app-quotes-details *ngIf=quote.showDateEntered [quote]= 'quote'></app-quotes-details>
+        </div>
+        
     </ul>
     <p *ngIf ='quotes.length > 5'>You have entered more than 5 goals</p>
 </div>
