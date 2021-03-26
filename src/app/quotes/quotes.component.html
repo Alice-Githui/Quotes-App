@@ -4,9 +4,9 @@
         <div *ngFor = 'let quote of quotes; let i= index'>
             <li> {{quote.narration}}</li>  
             <button (click) = "showDetails(i)">Show Details</button>
-            <app-quotes-details *ngIf=quote.showAuthor [quote]= 'quote'></app-quotes-details>
-            <app-quotes-details *ngIf=quote.showEnteredBy [quote]= 'quote'></app-quotes-details>
-            <app-quotes-details *ngIf=quote.showDateEntered [quote]= 'quote'></app-quotes-details>
+            <img [src] = "url">
+            <img [src] = "lru"> 
+            <app-quotes-details *ngIf=quote.showAuthor [quote]= 'quote' (isComplete) = 'deleteQuote($event, (i))'></app-quotes-details>
         </div>
         
     </ul>
