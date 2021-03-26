@@ -16,6 +16,16 @@ export class QuotesComponent implements OnInit {
 
   ]
 
+  //add a new Quote to the existing quotes
+
+  addNewQuotesList(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.dateEntered = new Date(quote.dateEntered)
+    this.quotes.push(quote)
+
+  }
+
   //function to show details when the show details button is clicked
   showDetails(index){
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor

@@ -1,25 +1,42 @@
 <div class = "container-fluid">
     <h2>Add a quote;</h2>
-    <form>
+    <form (ngSubmit)= 'submitQuote()' #quoteForm = 'ngForm'>
         <div class="form-group">
             <label for ="quote">Quote</label>
-            <textarea type="text" id="quote" class="form-control" required></textarea>
+            <textarea type="text" id="quote" class="form-control" [(ngModel)] = "newQuotesList.narration" name="narration" #narration= 'ngModel' required></textarea>
+            {{newQuotesList.narration}}
+            <div [hidden] = "narration.valid || narration.pristine" class= "alert alert-danger">
+                <p>Narration of this quote is required</p>
+            </div>
         </div>
         <div class="form-group">
             <label for ="author">Authored By:</label>
-            <input type="text" id="author" class="form-control" required>
+            <input type="text" id="author" class="form-control" [(ngModel)] = "newQuotesList.author" name= "author" #author='ngModel' required>
+            {{newQuotesList.author}}
+            <div [hidden] = "author.valid || author.pristine" class= "alert alert-danger">
+                <p>Author of the Quote is required</p>
+            </div>
         </div>
         <div class="form-group">
             <label for ="entry-by">Entered By:</label>
-            <input type="text" id="entry-by" class="form-control" required>
+            <input type="text" id="entry-by" class="form-control" [(ngModel)] = "newQuotesList.enteredBy" name="enteredBy"  #enteredBy='ngModel' required>
+            {{newQuotesList.enteredBy}}
+            <div [hidden] = "enteredBy.valid || enteredBy.pristine" class= "alert alert-danger">
+                <p>Your Name is required</p>
+            </div>
         </div>
         <div class="form-group">
             <label for ="date-created">Date Created:</label>
-            <input type="date" id="date-created" class="form-control" required>
+            <input type="date" id="date-created" class="form-control" min = "2021-03-26" [(ngModel)] = "newQuotesList.dateEntered" name = "dateEntered" #dateEntered = 'ngModel' required>
+            {{newQuotesList.dateEntered}}
+            <div [hidden] = "dateEntered.valid || dateEntered.pristine" class= "alert alert-danger">
+                <p>Please enter today's date</p>
+            </div>
         </div>
+        <button class = "btn btn-danger" type="submit" id="submit-button">Submit</button>
 
     </form>
-    <button class = "btn btn-danger" type="submit" id="submit-button">Submit</button>
+    
 
 </div>
 

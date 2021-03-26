@@ -8,6 +8,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
 body{
@@ -16,8 +17,8 @@ body{
     justify-content: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    background-color: #ffffff;
+    /* height: 100vh; */
+    background-color: #fafafa;
     
 }
 
@@ -28,8 +29,10 @@ h1{
 
 .body{
     box-shadow: 5px 10px 8px 10px #888888;
-    width: 1000px;
-    justify-content: space-between;
+}
+
+.footer{
+    margin-top:30px;
 }
 
 
