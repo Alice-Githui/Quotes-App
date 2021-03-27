@@ -1,63 +1,57 @@
-<div class="container-fluid">
-    <div class="navbar">
-        <img [src] = "url1" class="topimage"> 
-       <a>
-           <button type="button" class="getstarted">Get Started</button>
-       </a>
-        
-    </div>
-    <div class="apptext">
-        <p>We have all at one point or another needed a little pick me up so we can soldier through the day. And we agree, there is absolutely nothing wrong with that. 
-            We provide a platform where you can submit your best quote to motivate others, see the best quotes that have been submitted by others on our website and also allow
-            you to like your best quotes.
-        </p>
-
-    </div>
+<div class="container-fluid">  
+    <app-landing-page></app-landing-page>  
     
-    <div class = "body">
-        <h1>Your Daily Motivational Quotes</h1>
-        <div class = "row">
-            <div class= "col-md-5">
+    <div id="body">
+        <div id="body-tags">
+             <div *ngFor = 'let quote of quotes; let i= index' class="list-item">
+                  <li> {{quote.narration}} 
+                     <br>
+                     <p>This quote was entered on {{quote.dateEntered | date}}</p>
+                                            
+                     <button (click) = "showDetails(i)">Show Details</button>
+                     <br>
+                     <button appLikeanddislike class="button-img">
+                     <img [src] = "url" >                                                  
+                     </button>
+                     <!-- <small>0</small> -->
+                     <button appLikeanddislike class="button-img">
+                     <img [src] = "lru" > 
+                     </button> 
+                      <!-- <small>0</small>  -->                                                                                   
+                         <app-quotes-details *ngIf=quote.showAuthor [quote]= 'quote' (isComplete) = 'deleteQuote($event, (i))'></app-quotes-details>
+                   </li>
+
+                </div>
+            <p *ngIf ='quotes.length > 5'>There are more than five quotes to pick from!!</p>
+
+        </div>
+        <hr>
+
+        <div class = "row" id= "detail">
+            <div class= "col-md-6">
                 <app-input-form (addQuote) = "addNewQuotesList($event)"></app-input-form>
     
             </div>
-            <div class="col-md-7">
-                <div class = "container1">
-                    <h2>Find Your Best Quote</h2>
-                            <ul>
-                                <div *ngFor = 'let quote of quotes; let i= index' class="list-item">
-                                    <!-- <div class="row">
-                                        <div class="card"> -->
-                                            <li> {{quote.narration}} 
-                                                <br>
-                                                <p>This quote was entered on {{quote.dateEntered | date}}</p>
-                                                
-                                                <button (click) = "showDetails(i)">Show Details</button>
-                                                <img [src] = "url" class="button-img">
-                                                <img [src] = "lru" class="button-img"> 
-                                                <app-quotes-details *ngIf=quote.showAuthor [quote]= 'quote' (isComplete) = 'deleteQuote($event, (i))'></app-quotes-details>
-                                            </li>
-
-                                        <!-- </div>
-
-                                    </div> -->
-                                   
-                                 </div>    
-                             </ul>
-                    
-
+            <div class="col-md-6">
+                <div class="apptext">
+                    <h2>Why We Exist</h2>
+                    <p>We have all at one point or another needed a little pick me up so we can soldier through the day. 
+                        <br>
+                        And we agree, there is absolutely nothing wrong with that. 
+                        <br>
+                        We provide a platform where you can submit your best quote to motivate others; see the best quotes that have been submitted by others on our website and also allow
+                        you to like your best quotes.
+                    </p>
+            
                 </div>
-                <p *ngIf ='quotes.length > 5'>There are more than five quotes to pick from!!</p>
             </div>
-    
         </div>
-       
     </div>
-    <div class="footer">
+    <hr>
+    <div>
         <footer>
-            <p>You can reach us on</p>
+            <p>You can reach us on:</p>
         </footer>
-
     </div>
     
 

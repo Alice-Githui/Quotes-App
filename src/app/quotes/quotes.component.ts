@@ -50,6 +50,6 @@ export class QuotesComponent implements OnInit {
 
   url="./assets/likebutton.jpg";
   lru = "./assets/dislikebutton.jpg";
-  url1 ="./assets/topnavimage.jpeg"
+  url1 = "./assets/topnavimage.jpeg"
 
 }

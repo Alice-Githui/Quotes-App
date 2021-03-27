@@ -9,6 +9,9 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesDetailsComponent } from './quotes-details/quotes-details.component';
 import { InputFormComponent } from './input-form/input-form.component';
 import { DateCountPipe } from './date-count.pipe';
+import { LikeanddislikeDirective } from './likeanddislike.directive';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { DateCountPipe } from './date-count.pipe';
     QuotesComponent,
     QuotesDetailsComponent,
     InputFormComponent,
-    DateCountPipe
+    DateCountPipe,
+    LikeanddislikeDirective,
+    LandingPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
