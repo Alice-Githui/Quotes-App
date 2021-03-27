@@ -8,9 +8,14 @@ export class DateCountPipe implements PipeTransform {
   transform(value: any): any {
     let currentDate:any = new Date().getDate()//get today's date and time
     let inputDate:any = new Date(value).getDate();
-    let differenceInDays = currentDate - inputDate
+    let differenceInDays = currentDate - inputDate;
 
-    return differenceInDays
+
+    if(differenceInDays >=1){
+      return differenceInDays
+    } else{
+      return 0
+    }  
 
   } 
 
