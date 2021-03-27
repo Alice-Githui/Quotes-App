@@ -28,7 +28,7 @@
         <div class="form-group">
             <label for ="date-created">Date Created:</label>
             <input type="date" id="date-created" class="form-control" [(ngModel)] = "newQuotesList.dateEntered" name = "dateEntered" #dateEntered = 'ngModel' required>
-            {{newQuotesList.dateEntered}}
+            {{newQuotesList.dateEntered | date}}
             <div [hidden] = "dateEntered.valid || dateEntered.pristine" class= "alert alert-danger">
                 <p>Please enter today's date</p>
             </div>
