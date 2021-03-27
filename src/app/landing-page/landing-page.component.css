@@ -1,4 +1,16 @@
-
+.header ul{
+    display: flex;
+}
+.header ul li{
+    list-style-type: none;
+    margin-left: 200px;
+}
+.header ul li:hover{
+    cursor: pointer;
+    background-color: rgb(165, 12, 12);
+    width: 100px;
+    text-transform: uppercase;
+}
 .get-started{
     margin-left: 2em;
     

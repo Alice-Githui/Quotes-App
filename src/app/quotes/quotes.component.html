@@ -26,32 +26,42 @@
 
         </div>
         <hr>
-
         <div class = "row" id= "detail">
-            <div class= "col-md-6">
-                <app-input-form (addQuote) = "addNewQuotesList($event)"></app-input-form>
-    
-            </div>
             <div class="col-md-6">
                 <div class="apptext">
                     <h2>Why We Exist</h2>
                     <p>We have all at one point or another needed a little pick me up so we can soldier through the day. 
                         <br>
-                        And we agree, there is absolutely nothing wrong with that. 
                         <br>
-                        We provide a platform where you can submit your best quote to motivate others; see the best quotes that have been submitted by others on our website and also allow
-                        you to like your best quotes.
-                    </p>
+                        And we agree, sometimes, all we need is an extra nudge to get up and get moving. </p>
+                        We provide a platform where you can;
+                        <br>
+                        <br>
+                        <ol>
+                            <strong>
+                                <em>
+                                <li>Get Inspiration from our quotes</li>
+                                <li>Submit your best quote and add to our library</li>
+                                <li>Motivate Others</li>
+                                <li>View other quotes submitted by other guests and;</li>
+                                <li>Like your best quotes on our website</li>
+                                </em>
+                            </strong>
+                            
+                        </ol> 
             
                 </div>
             </div>
+            <div class= "col-md-6">
+                <app-input-form (addQuote) = "addNewQuotesList($event)"></app-input-form>
+    
+            </div>
         </div>
+        <hr>
     </div>
     <hr>
     <div>
-        <footer>
-            <p>You can reach us on:</p>
-        </footer>
+        <app-footer></app-footer>
     </div>
     
 

@@ -1,0 +1,10 @@
+/* .footer ul{
+    display: flex;
+} */
+.footer ul li{
+    list-style-type: none;
+}
+.footer ul li:hover{
+    cursor: pointer;
+    background-color: rgb(165, 12, 12);
+}
