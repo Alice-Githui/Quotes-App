@@ -43,6 +43,7 @@ export class QuotesComponent implements OnInit {
     } 
   }
 
+
   constructor() { }
 
   ngOnInit(): void {

@@ -2,6 +2,7 @@
     <app-landing-page></app-landing-page>  
     
     <div id="body">
+        <h2>Our Quotes</h2>
         <div id="body-tags">
              <div *ngFor = 'let quote of quotes; let i= index' class="list-item">
                   <li> {{quote.narration}} 
@@ -10,14 +11,7 @@
                                             
                      <button (click) = "showDetails(i)">Show Details</button>
                      <br>
-                     <button appLikeanddislike class="button-img">
-                     <img [src] = "url" >                                                  
-                     </button>
-                     <!-- <small>0</small> -->
-                     <button appLikeanddislike class="button-img">
-                     <img [src] = "lru" > 
-                     </button> 
-                      <!-- <small>0</small>  -->                                                                                   
+                        <app-like-and-dislike (likeQuote) = 'quoteLiked($event, i)'></app-like-and-dislike>                                                                              
                          <app-quotes-details *ngIf=quote.showAuthor [quote]= 'quote' (isComplete) = 'deleteQuote($event, (i))'></app-quotes-details>
                    </li>
 

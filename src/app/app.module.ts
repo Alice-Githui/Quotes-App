@@ -12,6 +12,7 @@ import { DateCountPipe } from './date-count.pipe';
 import { LikeanddislikeDirective } from './likeanddislike.directive';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FooterComponent } from './footer/footer.component';
+import { LikeAndDislikeComponent } from './like-and-dislike/like-and-dislike.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     DateCountPipe,
     LikeanddislikeDirective,
     LandingPageComponent,
-    FooterComponent
+    FooterComponent,
+    LikeAndDislikeComponent
   ],
   imports: [
     BrowserModule,

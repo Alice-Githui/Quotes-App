@@ -10,6 +10,7 @@
     background-color: rgb(165, 12, 12);
     width: 100px;
     text-transform: uppercase;
+    color: white;
 }
 .get-started{
     margin-left: 2em;
