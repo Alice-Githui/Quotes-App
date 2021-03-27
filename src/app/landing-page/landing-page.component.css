@@ -1,6 +1,11 @@
 .header ul{
     display: flex;
 }
+.header{
+    background-color: #fff;
+    height: 60px;
+    line-height: 80px;
+}
 .header ul li{
     list-style-type: none;
     margin-left: 200px;
@@ -10,7 +15,10 @@
     background-color: rgb(165, 12, 12);
     width: 100px;
     text-transform: uppercase;
-    color: white;
+}
+
+.header ul li a:hover{
+    color: #fff;
 }
 .get-started{
     margin-left: 2em;
