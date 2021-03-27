@@ -1,3 +1,27 @@
-img{
+.button-img{
     height: 50px;
 }
+
+.list-item li{
+    border: 1px solid black;
+    border-radius: 5px;
+    list-style-type: none;
+    margin: 15px;
+    padding: 10px;
+}
+
+.topimage{
+    width: 100%;
+    height:600px;
+    object-fit: cover;
+    object-position: center center;
+
+}
+
+.apptext p{
+    text-align: center;
+    margin: 0px 20px;
+    /* align-items: center;
+    justify-content: center; */
+}
+
