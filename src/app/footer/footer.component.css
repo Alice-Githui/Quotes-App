@@ -1,0 +1,31 @@
+
+.footer{
+    background-color: rgb(3, 105, 3);
+}
+.footer ul li{
+    list-style-type: none;
+}
+.footer ul li:hover{
+    cursor: pointer;
+    background-color: rgb(165, 12, 12);
+}
+
+.footer ul li a{
+    text-align: left;
+    color: white;
+}
+
+.footer p{
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.mailing-list h5, label{
+    color: #fff;
+    margin-top: 10px;
+}
+
+.mailing-list button{
+    margin-top: 5px;
+}

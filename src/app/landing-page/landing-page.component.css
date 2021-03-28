@@ -1,0 +1,56 @@
+.header ul{
+    display: flex;
+}
+.header{
+    background-color: #fff;
+    height: 60px;
+    line-height: 80px;
+}
+.header ul li{
+    list-style-type: none;
+    margin-left: 200px;
+}
+.header ul li:hover{
+    cursor: pointer;
+    background-color: rgb(165, 12, 12);
+    width: 100px;
+    text-transform: uppercase;
+}
+
+.header ul li a:hover{
+    color: #fff;
+}
+.get-started{
+    margin-left: 2em;
+    
+}
+
+.get-started button{
+    position: absolute;
+    top: 70%;
+    left: 85%;
+    cursor: pointer;
+    padding: 0.5em 0.5em;
+    font-weight: bolder;
+    font-size: 16px;
+    outline: none;
+    width: 170px;
+    color: #026623;
+    background-color: #fff;
+
+}
+
+.get-started button:hover{
+    width: 170px;
+    letter-spacing: 2px;
+    background-color:#026623;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+img{
+    height: 600px;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center center;
+}

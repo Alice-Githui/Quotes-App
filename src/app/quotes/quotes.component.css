@@ -1,0 +1,71 @@
+.button-img{
+    margin-left: 15px;
+    border-radius: 5px; 
+    margin-top: 5px;   
+}
+
+.button-img img{
+    height: 30px;
+}
+
+
+.list-item li{
+    border: 1px solid black;
+    border-radius: 5px;
+    list-style-type: none;
+    margin: 15px;
+    padding: 10px;
+}
+
+.navbar{
+    background-image: url("/src/assets/topnavimage.jpeg");
+}
+
+.navbar{
+    position: relative;
+}
+.image{
+    height: 600px;
+}
+
+
+#body-tags{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap:wrap;
+    width: 1500px;
+}
+
+#body-tags li{
+    width: 250px;
+    height: 420px;
+    justify-content: space-between;
+    margin-left: 40px;
+}
+
+#detail{
+    margin-top: 10px;
+}
+
+.apptext{
+    text-align: justify;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 18px;
+    
+}
+
+.apptext h2{
+    border-bottom:rgb(165, 12, 12) 2px solid;
+    text-align: center;
+}
+
+.apptext p{
+    padding: 10px;
+}
+
+.txt{
+    margin-left: 450px;
+    text-transform: capitalize;
+}

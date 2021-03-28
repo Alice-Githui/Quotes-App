@@ -1,0 +1,65 @@
+<div class="container-fluid">  
+    <app-landing-page></app-landing-page>  
+    
+    <div id="body">
+        <div class = "row" id= "detail">
+            <div class="col-md-6">
+                <div class="apptext">
+                    <h2>Why We Exist</h2>
+                    <p>We have all at one point or another needed a little pick me up so we can soldier through the day. 
+                        <br>
+                        <br>
+                        And we agree, sometimes, all we need is an extra nudge to get up and get moving. </p>
+                        We provide a platform where you can;
+                        <br>
+                        <br>
+                        <ol>
+                            <strong>
+                                <em>
+                                <li>Get Inspiration from our quotes</li>
+                                <li>Submit your best quote and add to our library</li>
+                                <li>Motivate Others</li>
+                                <li>View other quotes submitted by other guests and;</li>
+                                <li>Like your best quotes on our website</li>
+                                </em>
+                            </strong>
+                            
+                        </ol> 
+            
+                </div>
+            </div>
+            <div class= "col-md-6">
+                <app-input-form (addQuote) = "addNewQuotesList($event)"></app-input-form>
+    
+            </div>
+        </div>
+        <hr>
+        <h2>Our Quotes</h2>
+        <div id="body-tags">
+             <div *ngFor = 'let quote of quotes; let i= index' class="list-item">
+                  <li> {{quote.narration}} 
+                     <br>
+                     <p>This quote was entered on {{quote.dateEntered | date}}</p>                       
+                     <button (click) = "showDetails(i)">Show Details</button>
+                     <app-likes></app-likes>
+                     <br>
+                        <app-like-and-dislike (likeQuote) = 'quoteLiked($event, i)'></app-like-and-dislike>                                                                              
+                         <app-quotes-details *ngIf=quote.showAuthor [quote]= 'quote' (isComplete) = 'deleteQuote($event, (i))'></app-quotes-details>
+                   </li>
+
+                </div>
+            <p *ngIf ='quotes.length > 5' class="txt"><strong>There are more than five quotes to pick from!!</strong></p>
+
+        </div>
+        <hr>
+        
+    </div>
+    <div>
+        <app-footer></app-footer>
+    </div>
+    
+
+</div>
+
+
+
