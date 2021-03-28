@@ -35,6 +35,8 @@ export class QuotesComponent implements OnInit {
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor
   }
 
+  //sort the number of likes
+
   //catches the event emitted and gives the action to be taken 
   deleteQuote(isComplete, index){
     if (isComplete) {
