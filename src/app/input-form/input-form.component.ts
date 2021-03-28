@@ -14,12 +14,14 @@ export class InputFormComponent implements OnInit {
 
   submitQuote(){
     this.addQuote.emit(this.newQuotesList);
+
   }
  
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

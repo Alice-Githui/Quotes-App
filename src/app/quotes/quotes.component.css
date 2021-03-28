@@ -34,11 +34,12 @@
     justify-content: flex-start;
     align-items: baseline;
     flex-wrap:wrap;
+    width: 1500px;
 }
 
 #body-tags li{
     width: 250px;
-    height: 250px;
+    height: 420px;
     justify-content: space-between;
     margin-left: 40px;
 }
@@ -62,4 +63,9 @@
 
 .apptext p{
     padding: 10px;
+}
+
+.txt{
+    margin-left: 450px;
+    text-transform: capitalize;
 }

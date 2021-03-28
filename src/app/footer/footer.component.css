@@ -18,10 +18,12 @@
 .footer p{
     color: #fff;
     text-transform: uppercase;
+    margin-top: 10px;
 }
 
 .mailing-list h5, label{
     color: #fff;
+    margin-top: 10px;
 }
 
 .mailing-list button{

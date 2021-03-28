@@ -1,0 +1,10 @@
+.like{
+    margin-top: 5px;
+    margin-left: 3px;
+    border-radius: 5px;
+}
+
+.like img{
+    height: 30px;
+    padding:0px;
+}

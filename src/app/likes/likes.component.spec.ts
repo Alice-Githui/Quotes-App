@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LikeAndDislikeComponent } from './like-and-dislike.component';
+import { LikesComponent } from './likes.component';
 
-describe('LikeAndDislikeComponent', () => {
-  let component: LikeAndDislikeComponent;
-  let fixture: ComponentFixture<LikeAndDislikeComponent>;
+describe('LikesComponent', () => {
+  let component: LikesComponent;
+  let fixture: ComponentFixture<LikesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LikeAndDislikeComponent ]
+      declarations: [ LikesComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LikeAndDislikeComponent);
+    fixture = TestBed.createComponent(LikesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
