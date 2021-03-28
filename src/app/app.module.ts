@@ -13,6 +13,7 @@ import { LikeanddislikeDirective } from './likeanddislike.directive';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { LikesComponent } from './likes/likes.component';
+import { MostLikesDirective } from './most-likes.directive';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { LikesComponent } from './likes/likes.component';
     LandingPageComponent,
     FooterComponent,
     LikesComponent,
+    MostLikesDirective,
   ],
   imports: [
     BrowserModule,
